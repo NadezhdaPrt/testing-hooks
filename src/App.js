@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import {Component, useState} from 'react';
 import {Container} from 'react-bootstrap';
 import './App.css';
 class Slider extends Component {
@@ -21,8 +21,24 @@ class Slider extends Component {
         this.setState(({autoplay}) => ({
             autoplay: !autoplay
         }))
+    } 
+   /*  const calcValue = () => {
+        console.log('random');
+        return Math.floor(Math.random() * (50 - 1) + 1);
     }
 
+    const Slider = (props) => {
+        const [slide, setSlide] = useState(calcValue);
+        const [autoplay, setAutoplay] = useState(false);
+
+        function changeSlide(i) {
+            setSlide(slide => slide + i);
+        }
+        function toggleAutoplay() {
+            setAutoplay(autoplay => !autoplay);
+        } */
+    
+    
     render() {
         return (
             <Container>
@@ -68,12 +84,12 @@ class Slider extends Component {
 //         </Container>
 //     )
 // }
-
+    
 
 function App() {
   return (
         <Slider/>
   );
 }
-
+    
 export default App;
